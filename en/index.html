@@ -42,7 +42,8 @@
   .topbar{background:var(--ink);color:var(--paper);font-size:.92rem}
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:11px 24px;flex-wrap:wrap}
   .topbar a{color:var(--paper);text-decoration:none;font-weight:700}
-  .topbar .phone{font-size:1.08rem;color:#f0d9b8}
+  .topbar .phone{font-size:1.08rem;color:#f0d9b8;display:inline-flex;align-items:center;
+    min-height:44px;padding:0 4px}
 
   /* Bild-Platzhalter */
   .ph{position:relative;background:repeating-linear-gradient(45deg,#e7e1d3,#e7e1d3 12px,#ded7c6 12px,#ded7c6 24px);
@@ -148,7 +149,7 @@
     padding:14px 0;border-bottom:1px solid var(--line)}
   .facts dt{color:var(--muted);font-size:.97rem}
   .facts dd{font-weight:600}
-  .facts dd .hint{display:block;font-weight:400;color:var(--muted);font-size:.92rem;margin-top:2px}
+  .facts dd .hint{display:block;font-weight:400;color:var(--muted);font-size:.95rem;margin-top:3px}
   @media(max-width:680px){.facts dl>div{grid-template-columns:1fr;gap:2px;padding:12px 0}}
 
   /* FAQ */
@@ -158,7 +159,8 @@
   .faq p{color:var(--muted);font-size:1rem}
 
   .topbar .lang{display:inline-flex;gap:2px;align-items:center;margin-left:14px}
-  .topbar .lang a,.topbar .lang b{padding:3px 7px;border-radius:2px;font-size:.85rem;letter-spacing:.03em}
+  .topbar .lang a,.topbar .lang b{padding:0 11px;border-radius:2px;font-size:.85rem;letter-spacing:.03em;
+    display:inline-flex;align-items:center;min-height:38px}
   .topbar .lang b{background:var(--clay);color:#fff}
   .topbar .lang a{color:#b9bfb0;opacity:.85}
   .topbar .lang a:hover{background:rgba(255,255,255,.12);color:#fff;opacity:1}
@@ -169,14 +171,14 @@
     border-radius:8px;box-shadow:0 18px 44px rgba(32,38,31,.14)}
   .luft figcaption{margin-top:14px;color:var(--muted);font-size:.96rem;
     display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:baseline}
-  .luft figcaption .quelle{font-size:.83rem;color:#8a8f83;white-space:nowrap}
+  .luft figcaption .quelle{font-size:.88rem;color:#8a8f83;white-space:nowrap}
 
   /* Anfrageformular */
   .kontakt form{max-width:640px;margin:34px auto 0;text-align:left}
   .kontakt .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   @media(max-width:600px){.kontakt .row{grid-template-columns:1fr;gap:0}}
   .kontakt .fld{margin-bottom:16px}
-  .kontakt label{display:block;font-size:.88rem;color:#b3b8a9;margin-bottom:6px;font-weight:600}
+  .kontakt label{display:block;font-size:.92rem;color:#b3b8a9;margin-bottom:6px;font-weight:600}
   .kontakt input,.kontakt textarea{width:100%;padding:13px 14px;border-radius:3px;
     border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);color:var(--paper);
     font-family:inherit;font-size:1rem;line-height:1.4}
@@ -186,13 +188,20 @@
   .kontakt textarea{resize:vertical;min-height:110px}
   .kontakt .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .kontakt form .btn{width:100%;margin-top:6px}
-  .kontakt .note{font-size:.85rem;color:#8f958a;margin-top:14px;text-align:left}
+  .kontakt .note{font-size:.9rem;color:#8f958a;margin-top:14px;text-align:left}
   .kontakt .note a{color:#b3b8a9}
   .kontakt .msg{margin-top:18px;padding:14px 16px;border-radius:3px;font-size:.97rem;display:none}
   .kontakt .msg.ok{display:block;background:rgba(107,142,90,.22);border:1px solid #6b8e5a;color:#dff0d4}
   .kontakt .msg.err{display:block;background:rgba(184,85,47,.2);border:1px solid var(--clay);color:#f6d9cb}
   .kontakt .alt{margin-top:26px;font-size:.95rem;color:#a9b0a1}
   .kontakt .alt a{color:var(--clay);font-weight:700;text-decoration:none}
+
+  @media(max-width:600px){
+    .kicker{font-size:.88rem;line-height:1.45;padding:8px 13px}
+    .hero .wrap{padding:64px 24px 56px}
+    .fw .info .tagline{font-size:.9rem}
+    section.block{padding:52px 0}
+  }
 
   footer{background:#171c15;color:#8a9082;font-size:.88rem;padding:28px 0}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -250,11 +259,11 @@
 <section class="block luft" id="hof">
   <div class="wrap">
     <h2>The estate at a glance</h2>
-    <p class="sub">Three buildings on one shared, enclosed site of 5 hectares – forest on three sides, fields in front. The „Wustrow“ apartment is in the brick building.</p>
+    <p class="sub">All buildings at a glance. The apartments are in the brick building, the manor house and the steward's house.</p>
     <figure>
-      <img src="../assets/gutshof-luftbild.jpg" alt="Aerial view of the Gutshof Groß-Behnkenhagen estate with labelled buildings, surrounded by forest and fields" loading="lazy" width="1536" height="1024">
+      <img src="../assets/gutshof-luftbild.jpg" alt="Aerial view of the Gutshof Groß-Behnkenhagen estate with labelled buildings, surrounded by forest and fields" loading="lazy" width="1300" height="867">
       <figcaption>
-        <span>Gutshof Groß-Behnkenhagen from above – the apartments are in the brick building, the manor house and the steward's house</span>
+        <span>Gutshof Groß-Behnkenhagen from above</span>
       </figcaption>
     </figure>
   </div>
