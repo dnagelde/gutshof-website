@@ -162,6 +162,15 @@
   .topbar .lang b{background:var(--clay);color:#fff}
   .topbar .lang a{color:#b9bfb0;opacity:.85}
   .topbar .lang a:hover{background:rgba(255,255,255,.12);color:#fff;opacity:1}
+  /* Luftbild */
+  .luft{background:var(--cream);padding-top:0}
+  .luft figure{margin:0}
+  .luft img{width:100%;height:auto;display:block;border:1px solid var(--line);
+    border-radius:8px;box-shadow:0 18px 44px rgba(32,38,31,.14)}
+  .luft figcaption{margin-top:14px;color:var(--muted);font-size:.96rem;
+    display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:baseline}
+  .luft figcaption .quelle{font-size:.83rem;color:#8a8f83;white-space:nowrap}
+
   /* Anfrageformular */
   .kontakt form{max-width:640px;margin:34px auto 0;text-align:left}
   .kontakt .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -235,6 +244,19 @@
       </ul>
     </div>
     <div style="background:url('assets/gutshof-detail.jpg') center/cover;min-height:340px;border-radius:6px;box-shadow:0 18px 40px rgba(32,38,31,.18)"></div>
+  </div>
+</section>
+
+<section class="block luft" id="hof">
+  <div class="wrap">
+    <h2>Der Hof auf einen Blick</h2>
+    <p class="sub">Drei Gebäude auf einem gemeinsamen, abgeschlossenen Areal von 5 Hektar – Wald an drei Seiten, Felder davor. Die Wohnung „Wustrow“ liegt im Ziegelbau.</p>
+    <figure>
+      <img src="assets/gutshof-luftbild.jpg" alt="Luftbild des Gutshofs Groß-Behnkenhagen mit beschrifteten Gebäuden: Ziegelbau, Gutshaus, Verwalterbau, Heizhaus, Werkstatt und Storchennest, umgeben von Wald und Feldern" loading="lazy" width="1536" height="1024">
+      <figcaption>
+        <span>Gutshof Groß-Behnkenhagen aus der Luft – die Wohnungen liegen im Ziegelbau, Gutshaus und Verwalterbau</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
