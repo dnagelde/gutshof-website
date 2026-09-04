@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monteurunterkunft Stralsund – Gutshof Groß-Behnkenhagen | Für Firmen &amp; Teams</title>
+<meta name="description" content="Ganze Montageteams an einer Adresse: 21 Wohnungen, rund 80 Betten auf dem Gutshof Groß-Behnkenhagen bei Stralsund. Voll ausgestattet, mit Grillplatz und Ruhe nach Feierabend. Monatsweise, eine Rechnung, ein Ansprechpartner.">
+<style>
+  :root{
+    --ink:#20261f;--paper:#f4f1e9;--cream:#fbf9f3;--forest:#33432e;--forest-d:#232e1f;
+    --clay:#b8552f;--clay-d:#94411f;--line:#ddd6c7;--muted:#5c6157;--gold:#c69a4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.01em;line-height:1.12}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .topbar{background:var(--ink);color:var(--paper);font-size:.92rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:11px 24px;flex-wrap:wrap}
+  .topbar a{color:var(--paper);text-decoration:none;font-weight:700}
+  .topbar .phone{font-size:1.08rem;color:#f0d9b8}
+
+  /* Bild-Platzhalter */
+  .ph{position:relative;background:repeating-linear-gradient(45deg,#e7e1d3,#e7e1d3 12px,#ded7c6 12px,#ded7c6 24px);
+    border:1px dashed #b3a98f;border-radius:6px;display:grid;place-items:center;color:#6f6748;
+    font-size:.9rem;text-align:center;padding:16px;font-weight:600}
+  .ph small{display:block;font-weight:400;opacity:.75;margin-top:4px}
+
+  .hero{position:relative;color:var(--paper);background:var(--forest-d)}
+  .hero .ph-hero{position:absolute;inset:0;border:none;border-radius:0;
+    background:linear-gradient(180deg,rgba(32,38,31,.38),rgba(32,38,31,.80)),
+      url('assets/gutshaus-hero.jpg') center 40%/cover}
+  .hero .wrap{position:relative;padding:96px 24px 84px}
+  .kicker{display:inline-block;background:var(--clay);color:#fff;font-weight:800;
+    font-size:.82rem;padding:7px 14px;border-radius:2px;margin-bottom:24px}
+  .hero h1{font-size:clamp(2.2rem,5.2vw,3.8rem);max-width:17ch;font-weight:700}
+  .hero p.lead{font-size:clamp(1.08rem,2vw,1.4rem);max-width:48ch;margin-top:22px;color:#ece7db;font-family:inherit}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+  .btn{display:inline-block;padding:16px 28px;border-radius:3px;font-weight:800;
+    text-decoration:none;font-size:1.02rem;border:2px solid transparent;font-family:inherit;cursor:pointer}
+  .btn-primary{background:var(--clay);color:#fff}
+  .btn-primary:hover{background:var(--clay-d)}
+  .btn-ghost{border-color:rgba(244,241,233,.7);color:var(--paper)}
+  .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+  .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);padding:9px 15px;border-radius:3px;font-size:.92rem;margin-top:26px}
+
+  .stats{background:var(--ink);color:var(--paper)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:28px 20px;border-right:1px solid rgba(255,255,255,.12)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:Georgia,serif;font-size:2.3rem;color:#fff;line-height:1}
+  .stat .lab{font-size:.9rem;color:#b3b8a9;margin-top:8px}
+  @media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}
+    .stat{border-bottom:1px solid rgba(255,255,255,.12)}.stat:nth-child(2){border-right:none}}
+
+  section.block{padding:72px 0}
+  .block h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:10px;font-weight:700}
+  .sub{color:var(--muted);max-width:62ch;margin-bottom:38px;font-size:1.08rem}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .split .ph{min-height:340px}
+  .why-list{list-style:none}
+  .why-list li{padding:18px 0;border-bottom:1px solid var(--line)}
+  .why-list li:last-child{border-bottom:none}
+  .why-list h3{font-size:1.2rem;margin-bottom:5px;font-weight:700}
+  .why-list p{color:var(--muted);font-size:.99rem}
+  @media(max-width:840px){.split{grid-template-columns:1fr;gap:30px}}
+
+  .abend{background:var(--forest);color:var(--paper)}
+  .abend h2{color:#fff}.abend .sub{color:#cbd3c2}
+  .abend .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+  .abend .fcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:26px}
+  .abend .fcard h3{color:#fff;font-size:1.2rem;margin-bottom:8px;font-weight:700}
+  .abend .fcard p{color:#cbd3c2;font-size:.98rem}
+  .abend .fcard .em{font-size:1.5rem;display:block;margin-bottom:14px}
+  @media(max-width:820px){.abend .grid3{grid-template-columns:1fr}}
+
+  /* Beispielwohnung */
+  .fw{background:var(--cream)}
+  .fw .card{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#fff;
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 16px 40px rgba(32,38,31,.10)}
+  .fw .gallery{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;background:#efe9db}
+  .fw .gallery .ph{min-height:130px;border-radius:3px}
+  .fw .gallery .ph.big{grid-column:1 / -1;min-height:180px}
+  .fw .info{padding:34px}
+  .fw .info .tagline{color:var(--clay);font-weight:800;font-size:.85rem;margin-bottom:8px}
+  .fw .info h3{font-size:1.7rem;font-weight:700;margin-bottom:14px}
+  .fw .specs{list-style:none;margin:18px 0}
+  .fw .specs li{padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;font-size:.98rem}
+  .fw .specs li b{color:var(--forest)}
+  @media(max-width:820px){.fw .card{grid-template-columns:1fr}}
+
+  .amen{display:grid;grid-template-columns:1fr 1fr;gap:8px 44px;max-width:900px}
+  .amen div{display:flex;gap:13px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+  .amen .ico{color:var(--forest);font-weight:900;flex-shrink:0;font-size:1.1rem}
+  @media(max-width:640px){.amen{grid-template-columns:1fr}}
+
+  .lage{background:var(--paper)}
+  .mapwrap{max-width:760px;margin:0 auto}
+  .distmap{width:100%;height:auto;display:block}
+  .maplink{text-align:center;margin-top:22px}
+  .maplink a{color:var(--clay);font-weight:800;text-decoration:none;border-bottom:2px solid var(--clay);padding-bottom:2px}
+
+  .steps{counter-reset:s;display:grid;gap:18px;max-width:800px}
+  .steps .st{display:flex;gap:20px;align-items:flex-start}
+  .steps .st::before{counter-increment:s;content:counter(s);background:var(--clay);color:#fff;
+    font-family:Georgia,serif;font-weight:700;width:40px;height:40px;border-radius:50%;
+    display:grid;place-items:center;flex-shrink:0;font-size:1.15rem}
+  .steps .st h3{font-size:1.12rem;font-weight:700}
+  .steps .st p{color:var(--muted);font-size:.99rem}
+
+  .kontakt{background:var(--ink);color:var(--paper);text-align:center}
+  .kontakt h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700}
+  .kontakt p{color:#c0c6b7;max-width:50ch;margin:16px auto 0}
+  .kontakt .big-phone{font-family:Georgia,serif;font-size:clamp(1.9rem,5vw,3rem);
+    color:#f0d9b8;text-decoration:none;display:inline-block;margin:28px 0 8px;font-weight:700}
+  .kontakt .mail{color:var(--clay);font-weight:800;text-decoration:none;font-size:1.12rem}
+
+  footer{background:#171c15;color:#8a9082;font-size:.88rem;padding:28px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:#b3b8a9;text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><b>Gutshof Groß-Behnkenhagen</b> · Unterkünfte für Firmen &amp; Montageteams</span>
+    <a class="phone" href="tel:+493832859810">03 83 28 – 59 88 10</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="ph-hero"></div>
+  <div class="wrap">
+    <span class="kicker">Monteurunterkunft bei Stralsund</span>
+    <h1>Tagsüber auf der Baustelle. Abends zur Ruhe kommen.</h1>
+    <p class="lead">21 Wohnungen, rund 80 Betten auf einem ruhigen Gutshof – 20 Minuten von Stralsund. Ihr Team wohnt zusammen, kocht selbst, grillt nach Feierabend. Eine Adresse, eine Rechnung, ein Ansprechpartner.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#kontakt">Kontingent anfragen</a>
+      <a class="btn btn-ghost" href="#lage">Lage &amp; Anfahrt</a>
+    </div>
+    <div class="badge">✓ Kurzfristige Belegung &amp; flexible Verlängerung möglich</div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">80</div><div class="lab">Betten insgesamt</div></div>
+    <div class="stat"><div class="num">21</div><div class="lab">Wohnungen</div></div>
+    <div class="stat"><div class="num">20&nbsp;min</div><div class="lab">nach Stralsund</div></div>
+    <div class="stat"><div class="num">5&nbsp;ha</div><div class="lab">ruhiges Gelände</div></div>
+  </div>
+</div>
+
+<section class="block wrap" id="warum">
+  <div class="split">
+    <div>
+      <h2>Das ganze Team an einem Ort</h2>
+      <p class="sub" style="margin-bottom:24px">Kein Zusammensuchen einzelner Zimmer quer durch die Stadt. Ihr Trupp wohnt zusammen auf einem abgeschlossenen Gutshofgelände – morgens gemeinsam startklar, abends gemeinsam runterkommen.</p>
+      <ul class="why-list">
+        <li><h3>Ein Ansprechpartner, eine Rechnung</h3><p>Ein Angebot, eine Monatsrechnung mit ausgewiesener Mehrwertsteuer. Kein Verwalten von zehn Einzelbuchungen.</p></li>
+        <li><h3>Monatsweise &amp; verlängerbar</h3><p>Auf Projektlaufzeit ausgelegt. Zieht sich die Baustelle, verlängern wir unkompliziert.</p></li>
+        <li><h3>Platz für Transporter</h3><p>Stellplätze direkt auf dem Hof – auch für Sprinter und Firmenfahrzeuge.</p></li>
+      </ul>
+    </div>
+    <div style="background:url('assets/gutshof-detail.jpg') center/cover;min-height:340px;border-radius:6px;box-shadow:0 18px 40px rgba(32,38,31,.18)"></div>
+  </div>
+</section>
+
+<section class="block abend" id="feierabend">
+  <div class="wrap">
+    <h2>Nach Feierabend</h2>
+    <p class="sub">Ein harter Arbeitstag braucht einen ruhigen Ausklang. Kein Stadthotel an der Durchgangsstraße, sondern Natur und Platz.</p>
+    <div class="grid3">
+      <div class="fcard"><span class="em">🔥</span><h3>Grillplatz</h3><p>Gemeinsam grillen nach der Schicht – der Klassiker fürs Team am Abend.</p></div>
+      <div class="fcard"><span class="em">🌳</span><h3>Ruhe &amp; Natur</h3><p>Weitläufiges, verkehrsberuhigtes Gelände im Schatten alter Bäume. Wirklich still.</p></div>
+      <div class="fcard"><span class="em">🅿️</span><h3>Platz auf dem Hof</h3><p>5 Hektar Gutshofareal. Genug Raum für Fahrzeuge, Material und zum Durchatmen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Beispielwohnung -->
+<section class="block fw" id="beispiel">
+  <div class="wrap">
+    <h2>So wohnt Ihr Team – Beispiel</h2>
+    <p class="sub">Alle Wohnungen sind komplett eingerichtet und selbstversorgend. Stellvertretend die Wohnung „Wustrow" im Ziegelbau.</p>
+    <div class="card">
+      <div class="info" style="background:var(--forest);color:var(--paper);display:flex;flex-direction:column;justify-content:center">
+        <div class="tagline" style="color:var(--gold)">Ziegelbau · Maisonette</div>
+        <h3 style="color:#fff;font-size:2rem">Wohnung „Wustrow"</h3>
+        <p style="color:#cbd3c2">Großzügige Maisonette mit zwei Schlafzimmern und zwei Bädern – ideal für einen kompletten Trupp, der zusammen unterkommen will. Eine von 21 Wohnungen auf dem Hof.</p>
+        <div style="display:flex;gap:28px;margin:26px 0 6px;flex-wrap:wrap">
+          <div><div style="font-family:Georgia,serif;font-size:2.2rem;color:#fff;line-height:1">81<span style="font-size:1.1rem"> m²</span></div><div style="font-size:.88rem;color:#a9b6a0">Wohnfläche</div></div>
+          <div><div style="font-family:Georgia,serif;font-size:2.2rem;color:#fff;line-height:1">6</div><div style="font-size:.88rem;color:#a9b6a0">Schlafplätze</div></div>
+          <div><div style="font-family:Georgia,serif;font-size:2.2rem;color:#fff;line-height:1">2</div><div style="font-size:.88rem;color:#a9b6a0">Bäder</div></div>
+        </div>
+      </div>
+      <div class="info">
+        <ul class="specs" style="margin-top:0">
+          <li><span class="ico" style="color:var(--forest);font-weight:900">✓</span><span><b>2 Schlafzimmer</b> + Schlafcouch im Wohnbereich</span></li>
+          <li><span class="ico" style="color:var(--forest);font-weight:900">✓</span><span><b>Küche</b> mit Backofen, Ceranfeld, Geschirrspüler, Kaffeemaschine, Kühl-/Gefrier</span></li>
+          <li><span class="ico" style="color:var(--forest);font-weight:900">✓</span><span><b>Zwei Badezimmer</b> mit Dusche</span></li>
+          <li><span class="ico" style="color:var(--forest);font-weight:900">✓</span><span><b>Terrasse</b> mit Sitzmöbeln</span></li>
+          <li><span class="ico" style="color:var(--forest);font-weight:900">✓</span><span><b>WLAN</b> &amp; Parken kostenfrei</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#kontakt" style="margin-top:14px">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:26px">
+      <a href="https://www.gutshof-gross-behnkenhagen.de/ferienwohnungen/" target="_blank" rel="noopener"
+         style="color:var(--clay);font-weight:800;text-decoration:none;border-bottom:2px solid var(--clay);padding-bottom:2px">
+         Alle Wohnungen &amp; Ausstattungen ansehen ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="block wrap" id="ausstattung">
+  <h2>Ausstattung im Überblick</h2>
+  <p class="sub">Alles für die Selbstversorgung – günstiger und flexibler als Hotel und Restaurant.</p>
+  <div class="amen">
+    <div><span class="ico">✓</span><span><b>Voll ausgestattete Küchen</b> – selbst kochen, Vorräte lagern</span></div>
+    <div><span class="ico">✓</span><span><b>Kostenloses WLAN</b> in allen Wohnungen</span></div>
+    <div><span class="ico">✓</span><span><b>Waschmaschinen</b> für Gäste im Haus</span></div>
+    <div><span class="ico">✓</span><span><b>Stellplätze</b> für Transporter/Sprinter auf dem Hof</span></div>
+    <div><span class="ico">✓</span><span><b>Einzel- und Mehrbettbelegung</b> je nach Teamgröße</span></div>
+    <div><span class="ico">✓</span><span><b>Grillplatz &amp; Außengelände</b> für den Feierabend</span></div>
+    <div><span class="ico">✓</span><span><b>Selbst-Check-in</b> per Schlüsselbox, Code kommt vorab</span></div>
+    <div><span class="ico">✓</span><span><b>Anreise ab 16 Uhr</b>, Abreise bis 10 Uhr</span></div>
+  </div>
+</section>
+
+<section class="block lage" id="lage">
+  <div class="wrap">
+    <h2 style="text-align:center">Zentral zu den Baustellen der Region</h2>
+    <p class="sub" style="margin:10px auto 40px;text-align:center">Von Groß-Behnkenhagen aus erreichen Sie die wichtigsten Standorte zwischen Stralsund und Usedom.</p>
+    <div class="mapwrap">
+      <svg class="distmap" viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Entfernungen vom Gutshof zu den Städten der Region">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#b8552f"/>
+          </marker>
+        </defs>
+        <g stroke="#b8552f" stroke-width="2.5" marker-end="url(#arrow)" opacity="0.85">
+          <line x1="380" y1="260" x2="205" y2="120"/>
+          <line x1="380" y1="260" x2="600" y2="140"/>
+          <line x1="380" y1="260" x2="620" y2="330"/>
+          <line x1="380" y1="260" x2="560" y2="450"/>
+        </g>
+        <g font-family="Georgia,serif" text-anchor="middle">
+          <circle cx="190" cy="108" r="7" fill="#33432e"/>
+          <text x="190" y="88" font-size="21" font-weight="700" fill="#20261f">Stralsund</text>
+          <text x="190" y="132" font-size="16" fill="#5c6157">18 km · 20 min</text>
+          <circle cx="612" cy="130" r="7" fill="#33432e"/>
+          <text x="612" y="110" font-size="21" font-weight="700" fill="#20261f">Sassnitz</text>
+          <text x="612" y="154" font-size="16" fill="#5c6157">65 km · 60 min</text>
+          <circle cx="632" cy="338" r="7" fill="#33432e"/>
+          <text x="632" y="318" font-size="21" font-weight="700" fill="#20261f">Greifswald</text>
+          <text x="632" y="362" font-size="16" fill="#5c6157">30 km · 40 min</text>
+          <circle cx="568" cy="462" r="7" fill="#33432e"/>
+          <text x="568" y="492" font-size="21" font-weight="700" fill="#20261f">Wolgast</text>
+          <text x="568" y="450" font-size="16" fill="#5c6157">60 km · 60 min</text>
+        </g>
+        <circle cx="380" cy="260" r="46" fill="#b8552f"/>
+        <circle cx="380" cy="260" r="46" fill="none" stroke="#94411f" stroke-width="3"/>
+        <text x="380" y="255" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#fff">Gutshof</text>
+        <text x="380" y="274" text-anchor="middle" font-family="Georgia,serif" font-size="12.5" fill="#fbe6d5">Groß-Behnkenhagen</text>
+      </svg>
+    </div>
+    <p class="maplink"><a href="https://www.google.com/maps/search/?api=1&query=Gro%C3%9F-Behnkenhagen+23,+18519+Sundhagen" target="_blank" rel="noopener">In Google Maps öffnen ↗</a></p>
+  </div>
+</section>
+
+<section class="block wrap" id="ablauf">
+  <h2>So läuft die Anfrage</h2>
+  <p class="sub">Von der Anfrage bis zur Belegung – ohne Umwege.</p>
+  <div class="steps">
+    <div class="st"><div><h3>Anfrage mit Eckdaten</h3><p>Personenzahl, Zeitraum, ab wann. Telefonisch oder per E-Mail.</p></div></div>
+    <div class="st"><div><h3>Angebot &amp; Konditionen</h3><p>Sie erhalten kurzfristig ein Angebot passend zu Teamgröße und Dauer.</p></div></div>
+    <div class="st"><div><h3>Belegung &amp; Selbst-Check-in</h3><p>Der Schlüsselbox-Code kommt vor Anreise per Mail. Kein Termin zur Übergabe nötig.</p></div></div>
+    <div class="st"><div><h3>Eine Monatsrechnung</h3><p>Am Monatsende eine Rechnung fürs gesamte Kontingent, mit MwSt.-Ausweis.</p></div></div>
+  </div>
+</section>
+
+<section class="block kontakt" id="kontakt">
+  <div class="wrap">
+    <h2>Kontingent anfragen</h2>
+    <p>Sagen Sie uns Personenzahl und Zeitraum – wir melden uns in der Regel am selben Werktag.</p>
+    <a class="big-phone" href="tel:+493832859810">03 83 28 – 59 88 10</a><br>
+    <a class="mail" href="mailto:info@gutshof-gross-behnkenhagen.de">info@gutshof-gross-behnkenhagen.de</a>
+    <div style="margin-top:24px"><a class="btn btn-primary" href="mailto:info@gutshof-gross-behnkenhagen.de?subject=Anfrage%20Monteurunterkunft%20Gutshof">Anfrage per E-Mail</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Gutshof Groß-Behnkenhagen · MV Immoservice GmbH · Groß-Behnkenhagen 23, 18519 Sundhagen</span>
+    <span><a href="https://www.gutshof-gross-behnkenhagen.de/impressum/">Impressum</a> · <a href="https://www.gutshof-gross-behnkenhagen.de/datenschutz/">Datenschutz</a> · <a href="https://www.gutshof-gross-behnkenhagen.de/">Zur Urlaubsseite ↗</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
