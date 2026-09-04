@@ -25,8 +25,9 @@ assets/                         Bilder (Hero, Detail, 2 Grundrisse)
 ```
 
 Reines HTML/CSS, kein Build-Schritt, keine Abhängigkeiten, keine externen
-Ressourcen, kein JavaScript. Zum Ansehen genügt ein Doppelklick auf
-`index.html`.
+Ressourcen. Das einzige JavaScript ist das Anfrageformular auf den drei
+Startseiten; es sendet die Eingaben an einen Make-Webhook, der daraus eine
+E-Mail erzeugt. Zum Ansehen genügt ein Doppelklick auf `index.html`.
 
 ## Mehrsprachigkeit
 
@@ -45,8 +46,9 @@ nachziehen, sonst laufen die Sprachen auseinander.
 ## Eckdaten (Stand September 2026)
 
 - 18 Wohnungen in 3 Gebäuden, rund 60 Betten
+- Beispielwohnung Wustrow: 81 m² über zwei Ebenen, 7 Schlafplätze in 3 Schlafzimmern
 - 25 bis 30 Euro netto pro Person und Nacht
-- Telefon: 0383-16153005 (ElevenLabs-Telefonagent)
+- Telefon: 03831 6153005 (ElevenLabs-Telefonagent)
 - Entfernungen: Stralsund 18 km, Grimmen 20 km, Greifswald 30 km,
   Wolgast 60 km, Sassnitz 65 km
 
