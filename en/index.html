@@ -162,6 +162,29 @@
   .topbar .lang b{background:var(--clay);color:#fff}
   .topbar .lang a{color:#b9bfb0;opacity:.85}
   .topbar .lang a:hover{background:rgba(255,255,255,.12);color:#fff;opacity:1}
+  /* Anfrageformular */
+  .kontakt form{max-width:640px;margin:34px auto 0;text-align:left}
+  .kontakt .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:600px){.kontakt .row{grid-template-columns:1fr;gap:0}}
+  .kontakt .fld{margin-bottom:16px}
+  .kontakt label{display:block;font-size:.88rem;color:#b3b8a9;margin-bottom:6px;font-weight:600}
+  .kontakt input,.kontakt textarea{width:100%;padding:13px 14px;border-radius:3px;
+    border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);color:var(--paper);
+    font-family:inherit;font-size:1rem;line-height:1.4}
+  .kontakt input:focus,.kontakt textarea:focus{outline:2px solid var(--clay);outline-offset:1px;
+    background:rgba(255,255,255,.12)}
+  .kontakt input::placeholder,.kontakt textarea::placeholder{color:#8a9082}
+  .kontakt textarea{resize:vertical;min-height:110px}
+  .kontakt .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .kontakt form .btn{width:100%;margin-top:6px}
+  .kontakt .note{font-size:.85rem;color:#8f958a;margin-top:14px;text-align:left}
+  .kontakt .note a{color:#b3b8a9}
+  .kontakt .msg{margin-top:18px;padding:14px 16px;border-radius:3px;font-size:.97rem;display:none}
+  .kontakt .msg.ok{display:block;background:rgba(107,142,90,.22);border:1px solid #6b8e5a;color:#dff0d4}
+  .kontakt .msg.err{display:block;background:rgba(184,85,47,.2);border:1px solid var(--clay);color:#f6d9cb}
+  .kontakt .alt{margin-top:26px;font-size:.95rem;color:#a9b0a1}
+  .kontakt .alt a{color:var(--clay);font-weight:700;text-decoration:none}
+
   footer{background:#171c15;color:#8a9082;font-size:.88rem;padding:28px 0}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   footer a{color:#b3b8a9;text-decoration:none}
@@ -296,7 +319,7 @@
       <div><dt>Outdoors</dt><dd>Barbecue area and seating in front of the apartments</dd></div>
       <div><dt>Arrival</dt><dd>Self check-in via key box, code sent in advance by e-mail<span class="hint">arrival from 4 pm, departure by 10 am</span></dd></div>
       <div><dt>Distances</dt><dd>Stralsund 18 km · Grimmen 20 km · Greifswald 30 km · Wolgast 60 km · Sassnitz 65 km<span class="hint">Stralsund 20 minutes, Grimmen 23 minutes, Greifswald 40 minutes</span></dd></div>
-      <div><dt>Contact</dt><dd><a href="tel:+4938316153005" style="color:var(--clay);text-decoration:none">0049 3831 6153005</a> · <a href="mailto:info@gutshof-gross-behnkenhagen.de" style="color:var(--clay);text-decoration:none">info@gutshof-gross-behnkenhagen.de</a></dd></div>
+      <div><dt>Contact</dt><dd><a href="tel:+4938316153005" style="color:var(--clay);text-decoration:none">0049 3831 6153005</a><span class="hint">or use the <a href="#kontakt" style="color:var(--clay);text-decoration:none">enquiry form</a></span></dd></div>
       <div><dt>Operator</dt><dd>MV Immoservice GmbH, Sundhagen, Germany</dd></div>
     </dl>
   </div>
@@ -399,7 +422,7 @@
     </div>
     <div>
       <h3>How short-notice can a booking be?</h3>
-      <p>Short-notice bookings are possible subject to availability. Call us on <a href="tel:+4938316153005" style="color:var(--clay);text-decoration:none;font-weight:700">0049 3831 6153005</a> or write to <a href="mailto:info@gutshof-gross-behnkenhagen.de" style="color:var(--clay);text-decoration:none;font-weight:700">info@gutshof-gross-behnkenhagen.de</a>.</p>
+      <p>Short-notice bookings are possible subject to availability. Call us on <a href="tel:+4938316153005" style="color:var(--clay);text-decoration:none;font-weight:700">0049 3831 6153005</a> or use the <a href="#kontakt" style="color:var(--clay);text-decoration:none;font-weight:700">enquiry form</a>.</p>
     </div>
   </div>
 </section>
@@ -408,9 +431,49 @@
   <div class="wrap">
     <h2>Request a quote</h2>
     <p>Tell us the number of people and the period – we normally reply the same working day.</p>
-    <a class="big-phone" href="tel:+4938316153005">0049 3831 6153005</a><br>
-    <a class="mail" href="mailto:info@gutshof-gross-behnkenhagen.de">info@gutshof-gross-behnkenhagen.de</a>
-    <div style="margin-top:24px"><a class="btn btn-primary" href="mailto:info@gutshof-gross-behnkenhagen.de?subject=Anfrage%20Monteurunterkunft%20Gutshof">Enquire by e-mail</a></div>
+
+    <form id="anfrage" novalidate>
+      <div class="row">
+        <div class="fld">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" placeholder="First and last name" required autocomplete="name">
+        </div>
+        <div class="fld">
+          <label for="f-mail">E-mail</label>
+          <input type="email" id="f-mail" name="email" placeholder="name@company.com" required autocomplete="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="fld">
+          <label for="f-pers">People</label>
+          <input type="number" id="f-pers" name="personen" min="1" max="60" placeholder="e.g. 8" required>
+        </div>
+        <div class="fld">
+          <label for="f-von">From</label>
+          <input type="date" id="f-von" name="von" required>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f-bis">To</label>
+        <input type="date" id="f-bis" name="bis">
+      </div>
+      <div class="fld">
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="nachricht" placeholder="Type of work, special requirements, questions …"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-web">Website</label>
+        <input type="text" id="f-web" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="btn btn-primary" id="f-btn">Send enquiry</button>
+      <p class="note">We use your details solely to handle this enquiry. See the <a href="../datenschutz.html">privacy policy (German)</a> for details.</p>
+    </form>
+
+    <div class="msg" id="f-ok">Thank you, your enquiry has arrived. We normally reply the same working day.</div>
+    <div class="msg" id="f-err">Sending failed. Please call us on 0049 3831 6153005 – we are happy to take your enquiry by phone.</div>
+
+    <p class="alt">Prefer to get in touch directly? Give us a call:<br>
+      <a href="tel:+4938316153005">0049 3831 6153005</a></p>
   </div>
 </section>
 
@@ -434,7 +497,13 @@
       "inLanguage": "en",
       "image": "https://monteurwohnungen-stralsund.de/assets/gutshaus-hero.jpg",
       "telephone": "+4938316153005",
-      "email": "info@gutshof-gross-behnkenhagen.de",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "reservations",
+        "telephone": "+4938316153005",
+        "availableLanguage": ["de", "en", "pl"],
+        "url": "https://monteurwohnungen-stralsund.de/en/#kontakt"
+      },
       "priceRange": "25-30 EUR per person per night",
       "currenciesAccepted": "EUR",
       "numberOfRooms": 18,
@@ -451,6 +520,54 @@
     }
   ]
 }
+</script>
+
+
+<script>
+(function () {
+  var form = document.getElementById('anfrage');
+  if (!form) return;
+  var btn = document.getElementById('f-btn');
+  var ok = document.getElementById('f-ok');
+  var err = document.getElementById('f-err');
+  var label = btn.textContent;
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    ok.className = 'msg'; err.className = 'msg';
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (form.website.value) return;               // Spam-Falle
+    btn.disabled = true; btn.textContent = 'Sending …';
+
+    var data = {
+      sprache: 'en',
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      personen: form.personen.value,
+      von: form.von.value,
+      bis: form.bis.value,
+      nachricht: form.nachricht.value.trim(),
+      quelle: location.href,
+      zeitpunkt: new Date().toISOString()
+    };
+
+    fetch('https://hook.eu1.make.com/et2jgjg3oc5mi88a7vvj80wevpew35iq', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.style.display = 'none';
+        ok.className = 'msg ok';
+        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        err.className = 'msg err';
+        btn.disabled = false; btn.textContent = label;
+      });
+  });
+})();
 </script>
 
 </body>
